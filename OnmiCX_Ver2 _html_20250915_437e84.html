@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniCX - Global Omnichannel Contact Center Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0B3D91;
+            --primary-dark: #0A3275;
+            --secondary: #004B3A;
+            --accent: #4F46E5;
+            --light: #F5F8FF;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(11,61,145,0.95) 0%, rgba(0,75,58,0.95) 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(11, 61, 145, 0.15);
+        }
+        
+        .nav-scroll {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .stagger-item {
+            opacity: 0;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 py-4 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center">
+                    <div class="h-10 w-10 rounded-md bg-[#0B3D91] flex items-center justify-center text-white font-bold text-xl">OCX</div>
+                    <span class="ml-3 text-xl font-bold text-gray-900">OmniCX</span>
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#" class="text-sm font-medium text-gray-700 hover:text-[#0B3D91] transition">Home</a>
+                    <a href="#services" class="text-sm font-medium text-gray-700 hover:text-[#0B3D91] transition">Services</a>
+                    <a href="#industries" class="text-sm font-medium text-gray-700 hover:text-[#0B3D91] transition">Industries</a>
+                    <a href="#about" class="text-sm font-medium text-gray-700 hover:text-[#0B3D91] transition">About</a>
+                    <a href="#contact" class="text-sm font-medium text-gray-700 hover:text-[#0B3D91] transition">Contact</a>
+                    <a href="#contact" class="bg-[#0B3D91] text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-[#0A3275] transition">Get Quote</a>
+                </div>
+                
+                <div class="lg:hidden">
+                    <button class="text-gray-700 focus:outline-none" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="lg:hidden hidden bg-white py-4 shadow-lg" id="mobile-menu">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col space-y-3">
+                <a href="#" class="py-2 text-gray-700 font-medium">Home</a>
+                <a href="#services" class="py-2 text-gray-700 font-medium">Services</a>
+                <a href="#industries" class="py-2 text-gray-700 font-medium">Industries</a>
+                <a href="#about" class="py-2 text-gray-700 font-medium">About</a>
+                <a href="#contact" class="py-2 text-gray-700 font-medium">Contact</a>
+                <a href="#contact" class="bg-[#0B3D91] text-white px-5 py-2 rounded-md text-sm font-medium text-center mt-2">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 hero-gradient text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">Intelligent Customer Experience Solutions</h1>
+                    <p class="text-xl md:text-2xl mb-8 text-blue-100">We combine human expertise with cutting-edge technology to deliver exceptional omnichannel support.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="bg-white text-[#0B3D91] hover:bg-gray-100 px-8 py-4 rounded-md text-lg font-semibold text-center transition shadow-lg hover:shadow-xl">Request a Free Quote</a>
+                        <a href="#services" class="bg-transparent border-2 border-white hover:bg-white hover:text-[#0B3D91] px-8 py-4 rounded-md text-lg font-semibold text-center transition">Our Services</a>
+                    </div>
+                </div>
+                <div class="relative fade-in">
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern contact center" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white text-[#0B3D91] p-5 rounded-xl shadow-lg hidden lg:block">
+                        <p class="font-bold text-lg">24/7/365 Support</p>
+                        <p class="text-sm">Always available for your customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <p class="text-gray-500 text-sm uppercase tracking-wider font-semibold">Trusted by leading brands worldwide</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+                <div class="flex justify-center">
+                    <div class="h-12 w-32 bg-white rounded-md flex items-center justify-center px-4 py-2 shadow-sm">
+                        <span class="text-gray-700 font-bold text-xl">Fortune</span>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="h-12 w-32 bg-white rounded-md flex items-center justify-center px-4 py-2 shadow-sm">
+                        <span class="text-blue-500 font-bold text-xl">Microsoft</span>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="h-12 w-32 bg-white rounded-md flex items-center justify-center px-4 py-2 shadow-sm">
+                        <span class="text-green-600 font-bold text-xl">Stripe</span>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="h-12 w-32 bg-white rounded-md flex items-center justify-center px-4 py-2 shadow-sm">
+                        <span class="text-red-500 font-bold text-xl">Netflix</span>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="h-12 w-32 bg-white rounded-md flex items-center justify-center px-4 py-2 shadow-sm">
+                        <span class="text-gray-800 font-bold text-xl">Uber</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 bg-[#F5F8FF] rounded-xl">
+                    <div class="text-4xl font-bold text-[#0B3D91] mb-2">99.5%</div>
+                    <div class="text-gray-700 font-medium">Uptime</div>
+                </div>
+                <div class="p-6 bg-[#F5F8FF] rounded-xl">
+                    <div class="text-4xl font-bold text-[#0B3D91] mb-2">95%</div>
+                    <div class="text-gray-700 font-medium">CSAT Scores</div>
+                </div>
+                <div class="p-6 bg-[#F5F8FF] rounded-xl">
+                    <div class="text-4xl font-bold text-[#0B3D91] mb-2">50+</div>
+                    <div class="text-gray-700 font-medium">Languages Supported</div>
+                </div>
+                <div class="p-6 bg-[#F5F8FF] rounded-xl">
+                    <div class="text-4xl font-bold text-[#0B3D91] mb-2">100+</div>
+                    <div class="text-gray-700 font-medium">Global Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Our Service Offerings
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                    Comprehensive solutions designed to meet your customer experience needs
+                </p>
+            </div>
+            
+            <!-- Service Categories Tabs -->
+            <div class="flex flex-col items-center mb-12">
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <button class="service-tab-btn active px-6 py-3 rounded-full bg-[#0B3D91] text-white font-medium" data-tab="customer-engagement">
+                        Customer Engagement
+                    </button>
+                    <button class="service-tab-btn px-6 py-3 rounded-full bg-white text-gray-700 border border-gray-300 font-medium hover:bg-gray-50" data-tab="ai-data">
+                        AI & Data Solutions
+                    </button>
+                    <button class="service-tab-btn px-6 py-3 rounded-full bg-white text-gray-700 border border-gray-300 font-medium hover:bg-gray-50" data-tab="business-process">
+                        Business Process Optimization
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Customer Engagement Services -->
+            <div class="service-tab-content active" id="customer-engagement">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card bg-white rounded-xl p-6 shadow-md transition-all duration-300 hover-lift">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-md bg-[#0B3D91] text-white">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-900">Voice Services</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Comprehensive inbound and outbound voice solutions with advanced routing and analytics.
+                        </p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Skills-based routing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Interactive Voice Response (IVR)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Call recording & monitoring</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card bg-white rounded-xl p-6 shadow-md transition-all duration-300 hover-lift">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-md bg-[#0B3D91] text-white">
+                                <i class="fas fa-comments text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-900">Live Chat</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Real-time customer engagement solutions with quick response times and high satisfaction.
+                        </p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Proactive chat invitations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Co-browsing capabilities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Chatbot integration</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card bg-white rounded-xl p-6 shadow-md transition-all duration-300 hover-lift">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-md bg-[#0B3D91] text-white">
+                                <i class="fas fa-hashtag text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold text-gray-900">Social Media Management</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            360° social media management and customer engagement across all major platforms.
+                        </p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500
